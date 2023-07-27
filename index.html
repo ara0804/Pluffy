@@ -11,124 +11,123 @@
     <title>Document</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-blue navbar-blue">
-      <div class="container">
-          <a class="navbar-brand" href="#"><img src="m.png" alt=""></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
+<nav class="navbar navbar-expand-lg bg-blue navbar-blue">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="m.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
 
-                  <li class="nav-item">
-                      <a class="nav-link logged-out" href="#" data-bs-toggle="modal"
-                          data-bs-target="#signinModal">Sign in</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link logged-out" href="#" data-bs-toggle="modal"
-                          data-bs-target="#signupModal">Sign up</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link logged-in" href="#" id="logout">Logout</a>
-                  </li>
+                <li class="nav-item">
+                    <a class="nav-link logged-out" href="#" data-bs-toggle="modal"
+                        data-bs-target="#signinModal">Sign in</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link logged-out" href="#" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link logged-in" href="#" id="logout">Logout</a>
+                </li>
 
-              </ul>
-          </div>
-      </div>
-  </nav>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-  <!--CRUD - diario digital para un profe o estudiante -->
-  <div class="container">
-      <div class="row">
-          <div class="col md-6 offset-md-3">
-              <div class="card">
-                  <div class="card-body">
-                      <h1 class="h4">Publica tu tip o consejo </h1>
-                      <form id="task-form">
-                          <input type="text" id="task-title" class="form-control mb-3" placeholder="Titulo tarea"
-                              autofocus>
-                          <label for="description">Descripcion: </label>
-                          <textarea id="task-description" rows="3" class="form-control mb-3" placeholder="Descripcion"></textarea>
+<!--CRUD - diario digital para un profe o estudiante -->
+<div class="container">
+    <div class="row">
+        <div class="col md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="h4">Publica tu tip o consejo </h1>
+                    <form id="task-form">
+                        <input type="text" id="task-title" class="form-control mb-3" placeholder="Titulo tarea"
+                            autofocus>
+                        <label for="description">Descripcion: </label>
+                        <textarea id="task-description" rows="3" class="form-control mb-3" placeholder="Descripcion"></textarea>
 
-                          <button class="btn btn-dark" id="btn-task-save">Publicar</button>
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="col md-6 offset-md-3" id="task-container"></div>
+                        <button class="btn btn-dark" id="btn-task-save">Publicar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col md-6 offset-md-3" id="task-container"></div>
 
-  <!-- Signin Modal -->
-  <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-          <div class="modal-content bg-white">
-              <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Sign In</h1>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                      aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                  <form id="login-form">
-                      <label for="email">Email: </label>
-                      <input type="email" id="signin-email" class="form-control mb-3" placeholder="Email" required>
+<!-- Signin Modal -->
+<div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-white">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Sign In</h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="login-form">
+                    <label for="email">Email: </label>
+                    <input type="email" id="signin-email" class="form-control mb-3" placeholder="Email" required>
 
-                      <label for="password">Password: </label>
-                      <input type="password" id="signin-password" class="form-control mb-3" placeholder="********"
-                          required>
+                    <label for="password">Password: </label>
+                    <input type="password" id="signin-password" class="form-control mb-3" placeholder="********"
+                        required = " " autocomplete="current-password">
 
-                      <button type="submit" class="btnlogin w-100 mb-4">
-                          Login
-                      </button>
+                    <button type="submit" class="btnlogin w-100 mb-4">
+                        Login
+                    </button>
 
-                      <button type="button" class="btn btn-dark" id="googleLogin">
-                          Google
-                      </button>
-                  </form>
+                    <button type="button" class="btn btn-dark" id="googleLogin">
+                        Google
+                    </button>
+                </form>
 
-              </div>
+            </div>
 
-          </div>
-      </div>
-  </div>
+        </div>
+    </div>
+</div>
 
-  <!-- Signup Modal -->
-  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-          <div class="modal-content bg-white">
-              <div class="modal-header">
-                  <h3>Sign Up</h3>
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Sign Up</h1>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                      aria-label="Close"></button>
-              </div>
-              <div class="modal-body p-5">
+<!-- Signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-white">
+            <div class="modal-header">
+                <h3>Sign Up</h3>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Sign Up</h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-5">
 
-                  <form id="signup-form">
+                <form id="signup-form">
 
-                      <label for="email">Email: </label>
-                      <input type="email" id="signup-email" class="form-control mb-3" placeholder="Email" required>
+                    <label for="email">Email: </label>
+                    <input type="email" id="signup-email" class="form-control mb-3" placeholder="Email" required>
 
-                      <label for="password">Password: </label>
-                      <input type="password" id="signup-password" class="form-control mb-3" placeholder="********"
-                          required>
-
-
-                      <button type="submit" class="btn btn-dark">
-                          Register
-                      </button>
-
-                  </form>
+                    <label for="password">Contraseña: </label>
+                    <input type="password" id="signup-password"  class="form-control mb-3" placeholder="********"
+                        required=" " autocomplete="current-password">
 
 
+                    <button type="submit" class="btn btn-dark">
+                        Registro
+                    </button>
 
-              </div>
+                </form>
 
-          </div>
-      </div>
-  </div>
 
+
+            </div>
+
+        </div>
+    </div>
+</div>
     <script type="module" src="./js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

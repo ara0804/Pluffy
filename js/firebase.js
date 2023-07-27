@@ -33,19 +33,19 @@ export const auth = getAuth (app)
 
 
 //conexion a la base de datos 
-export const db = getFirestone();
+export const db = getFirestore();
 
 export const saveTask = (title, description) =>
   //console.log (title, description);
-  addDoc(collection(db, "tareas" ), {tittle, description})
+  addDoc(collection(db, "post" ), {title, description})
 
 
   //listar datos 
   //export const getTasks = () => console.log('tasks-list');
-  export const getTasks = () => getDocs(collection(db, "tareas"))
+  export const getTasks = () => getDocs(collection(db, "posts"))
 
 // generando la nueva funcion
-export const onGetTasks =  (callback) => onSnapshot(collection(db, "tareas"), callback);
+export const onGetTasks =  (callback) => onSnapshot(collection(db, "posts"), callback);
 
 // export {
  //   onSnapshot,
