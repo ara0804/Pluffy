@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
 import {getAuth} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js"
 //import {} "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"
 import { getFirestore, 
@@ -28,8 +28,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-export const auth = getAuth (app)
+export const analytics = getAnalytics(app);
+export const auth = getAuth (app);
 
 
 //conexion a la base de datos 
@@ -52,14 +52,14 @@ export const onGetTasks =  (callback) => onSnapshot(collection(db, "posts"), cal
  //   collection
   //}
 
-  export const deleteTask = (id) => deleteDoc(doc(db,"tareas", id));
+  export const deleteTask = (id) => deleteDoc(doc(db,"posts", id));
 
   // Se crea una funcion que traiga o que obtenga una tarea individual
-  export const getTask = (id) => getDoc(doc(db, "tareas", id))
+  export const getTask = (id) => getDoc(doc(db, "posts", id))
 
   // Crear una funcion que actualice una tarea
 
-  export const updateTask = (id, NewFieldsTask) => updateDoc(doc(db, "tareas", id), NewFieldsTask);
+  export const updateTask = (id, NewFieldsTask) => updateDoc(doc(db, "posts", id), NewFieldsTask);
 
 
   

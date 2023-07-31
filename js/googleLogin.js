@@ -1,6 +1,6 @@
 import {GoogleAuthProvider, signInWithPopup} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 import { auth } from "../js/firebase.js";
-import { showMessage } from "./js/showMessage.js";
+import { showMessage } from "./showMessage.js";
 
 
 

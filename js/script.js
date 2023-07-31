@@ -1,6 +1,6 @@
 import {onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 import  {auth} from './firebase.js' ;
-import { loginCheck } from "./loginCheck.js";
+import { loginCheck } from "./loginCheck.js/";
 import { 
     saveTask,
     //getTask,
@@ -12,7 +12,7 @@ import {
 import '../js/siginForm.js'
 import '../js/sigupForm.js' ;
 import '../js/logout.js' ;
-import '../js/googleLogin.js'
+import '../js/googleLogin.js';
 
 
 const taskForm = document.getElementById("task-form");
@@ -25,10 +25,11 @@ let editStatus = false;
 // Crear una variable para el id de la tarea
 
 let id = '';
-
+console.log("hola")
 window.addEventListener("DOMContentLoaded", async ()=>{
     //getTasks();
    // const querySnapshot = await getTasks();
+    console.log("hola")
     onGetTasks((querySnapshot) => {
     
     // Inicializamos nuestro html vacio     

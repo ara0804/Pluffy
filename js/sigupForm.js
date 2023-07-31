@@ -1,6 +1,6 @@
 import {createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-import { auth } from "./firebase.js"
-import { showMessage } from "./showMessage.js"
+import { auth } from "../js/firebase.js"
+import { showMessage } from "../js/showMessage.js"
 
 
 
@@ -9,8 +9,8 @@ const signupForm = document.querySelector('#signup-form')
 signupForm.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    const email = signupForm['signup-email'].value
-    const password = signupForm['signup-password'].value
+    const email = signupForm["signup-email"].value
+    const password = signupForm["signup-password"].value
 
     console.log(email, password)
 
