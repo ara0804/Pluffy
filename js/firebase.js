@@ -9,7 +9,10 @@ collection,
 onSnapshot,
 deleteDoc,
 updateDoc,
-} from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"
+getDocs,
+getDoc,
+doc,
+} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js"
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries

@@ -1,6 +1,6 @@
-import{sigInWhitEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+import{signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 import {auth} from "../js/firebase.js" ;
-import {showMessage} from "../js/showMessage.js"
+import {showMessage} from "../js/showMessage.js";
 
 
 const signInForm = document.querySelector('#login-form');
@@ -9,7 +9,7 @@ signInForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = signInForm["signin-email"].value;
     const password = signInForm ["signin-password"].value;
-    try {const userCredentials = await sigInWhitEmailAndPassword (auth,email,password)
+    try {const userCredentials = await signInWithEmailAndPassword (auth,email,password)
     console.log(userCredentials)
     
     //// cerrar el modal de logueo de usuario

@@ -1,6 +1,6 @@
 import {onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 import  {auth} from './firebase.js' ;
-import { loginCheck } from "./loginCheck.js/";
+import { loginCheck } from "../js/loginCheck.js";
 import { 
     saveTask,
     //getTask,
@@ -9,7 +9,7 @@ import {
     getTask,
     updateTask,
 } from '../js/firebase.js';
-import '../js/siginForm.js'
+import '../js/siginForm.js';
 import '../js/sigupForm.js' ;
 import '../js/logout.js' ;
 import '../js/googleLogin.js';
@@ -25,11 +25,11 @@ let editStatus = false;
 // Crear una variable para el id de la tarea
 
 let id = '';
-console.log("hola")
+// console.log("hola")
 window.addEventListener("DOMContentLoaded", async ()=>{
     //getTasks();
    // const querySnapshot = await getTasks();
-    console.log("hola")
+    // console.log("hola")
     onGetTasks((querySnapshot) => {
     
     // Inicializamos nuestro html vacio     
@@ -44,7 +44,6 @@ window.addEventListener("DOMContentLoaded", async ()=>{
     
     // Para ver los idS de cada tarea de los botones
         console.log(doc.id)
-
             html += `
                 <div>
                     <h3>${task.title}</h3>
@@ -54,7 +53,7 @@ window.addEventListener("DOMContentLoaded", async ()=>{
                 </div>
                 `;
         });
-    taskContainer.innerHTML = html;
+        taskContainer.innerHTML = html;
     
     const btnsDelete = document.querySelectorAll('.btn-delete')
     //Probamos los botones
